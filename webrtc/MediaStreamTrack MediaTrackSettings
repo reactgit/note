@@ -1,0 +1,28 @@
+# MediaStreamTrack
+## prop
+id, kind, label, muted, readyState
+## event
+ended, mute, unmute
+
+## MediaStreamTrack.applyConstraints
+```
+const track = mediaStream.getVideoTracks()[0]
+track.applyConstraints(constraints)
+  .then(() => {})
+  .catch((e) => {});
+```
+## MediaStreamTrack.getSettings
+// 返回实际运行的值
+```
+const track = mediaStream.getVideoTracks()[0]
+const setting: MediaTrackSettings = track.getSettings();  
+```
+
+## MediaStreamConstraints.clone
+## MediaStreamTrack.stop
+## MediaStreamTrack.getCapabilities
+## MediaStreamTrack.getConstraints
+返回之前设置的值
+
+# MediaTrackSettings
+ == MediaStreamConstraints
