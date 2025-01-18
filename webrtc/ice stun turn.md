@@ -1,3 +1,9 @@
+从 stun server 那里获取的 公网 ip+port
+
+可以等所有的 candidate 收集到后 再和sdp 一起发给对方, 也可以 sdp 和 canditate 分开发送
+
+
+
 Trickle ICE //之前是要把所有的candidate都搜集到后再检查他们的联通性，现在是搜集到一个后就检查
 呼叫建立很慢 ，先与stun服务器通信获取 server reflexive 地址和relay 地址，加上local host地址和端口 构造三类ice candidate ，把这三类candidate 放到sdp 属性 (a=) ，完成这个动作后才实际发起sdp offer请求，接收者采用同样的过程，两边都完整收完对方的sdp后才开始p2p探测
  

@@ -2,8 +2,6 @@
 font-palette
 https://www.zhangxinxu.com/wordpress/2022/07/css-font-palette/
 
-font-variant-numeric
-
 system-ui  font-family
 https://juejin.cn/post/7195823084887719991
 
@@ -23,3 +21,124 @@ CSS font-variant-alternates
 
   Font unicode-range subsetting
   CSS Font Loading
+
+
+```
+@font-face {
+  font-family: FZCYS;
+  src: local("FZYaSongS-B-GB"),  //本地安装了这个字体的就使用这个字体, 没有的才会去请求后面的字体
+       url("FZCYS.woff2"),  
+       url("FZCYS.woff"),
+       url("FZCYS.ttf");
+}
+```
+
+# font-weight
+```
+@font-face {
+  font-family: 'QH';
+  font-weight: 400;
+  src: local('HYQihei 40S');
+}
+@font-face {
+  font-family: 'QH';
+  font-weight: 500;
+  src: local('HYQihei 50S');
+}
+@font-face {
+  font-family: 'QH';
+  font-weight: 600;
+  src: local('HYQihei 60S');
+}
+// 根据不同的 font-weight 加载不同的字体
+```
+
+# Font unicode-range
+@font-face {
+  font-family: BASE;
+  src: local('PingFang SC'),
+       local("Microsoft Yahei");
+}
+.font {
+    font-family: BASE;
+}
+@font-face {
+  font-family: quote;
+  src: local('SimSun');    
+  unicode-range: U+201c, U+201d; //只有对应的字符才使用 SimSun
+}
+
+
+# font-display
+https://www.cnblogs.com/wanghuanl/p/18059398
+
+# font-palette
+https://www.zhangxinxu.com/wordpress/2022/07/css-font-palette/
+
+
+# font-feature-settings
+
+
+# font-variation-settings
+https://github.com/FoxDaxian/memory/issues/4
+https://blog.csdn.net/qq_37247349/article/details/130919191
+
+# text-rendering
+
+# font-smoothing
+
+# font-stretch
+将自宽拉伸或压缩 
+// 需要字体本身支持
+
+# font-kerning
+有些字体定义了字符之间的距离，即字距。而不同的字符组合，字距是不一样的。而该属性就是为了让程序员决定是否取消字距。
+// 必须是具有字距调整信息的OpenType字体才有用, 并不是所有字符都有效的, 如果希望所有字符间距都有调整，应该使用CSS属性letter-spacing
+
+
+# font-variant
+font-variant-caps
+font-variant-numeric
+font-variant-alternates
+font-variant-ligatures //专门用来控制连字效果的开启和关闭
+font-variant-east-asian: traditional //简体变繁体
+
+
+# FontFace
+```
+const font = new FontFace("myfont", "url(myfont.woff)", {
+  family: 'xxx',
+  unicodeRange: 'xxx',
+  variant: 'xxx',
+  featureSettings: 'xxx',
+  style: "italic",
+  weight: "400",
+  stretch: "condensed",
+});
+// font.family = 'xxx';
+// font.status //"unloaded"、"loading"、"loaded"、"error"
+// font.loaded
+
+document.fonts.add(font);
+// document.fonts.check("12px courier");
+// document.fonts.load("12px MyFont", "ß").then(/* ... */);
+// document.fonts.status // loading loaded
+// document.fonts.onloading = () => {}
+// document.fonts.onloadingdone = () => {}
+// document.fonts.onloadingerror = () => {}
+
+font.load();
+document.fonts.ready.then(() => {});
+
+const availableFonts = await window.queryLocalFonts();
+for (const fontData of availableFonts) {
+  console.log(fontData.postscriptName, fontData.fullName, fontData.family, fontData.style));
+  const sfnt = await fontData.blob();
+}
+```
+
+
+
+# link
+https://www.zhangxinxu.com/wordpress/2016/11/css-unicode-range-character-font-face/
+https://juejin.cn/post/7242735049417392189

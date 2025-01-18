@@ -1,1 +1,169 @@
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+# 可用
+:any-link
+::backdrop 
+:defined
+:where :is :matches :any
+@layer
+@supports 
+aspect-ratio
+backdrop-filter
+background-clip
+block-size
+clip-path
+dynamic-range
+filter
+image-orientation
+image-rendering
+initial-letter
+inset-block-end
+mask-image https://www.zhangxinxu.com/wordpress/2017/11/css-css3-mask-masks/
+margin-block-start
+mix-blend-mode
+object-fit https://www.zhangxinxu.com/wordpress/2015/03/css3-object-position-object-fit/
+padding-block
+padding-inline
+place-content
+shape-outside https://juejin.cn/post/6844903759072460807 
+text-emphasis
+touch-action
+transform-function
+translate rotate scale
+webkit-box-reflect https://www.zhangxinxu.com/wordpress/2016/08/webkit-box-reflect-moz-element/
+will-change
+
+
+# 将来可用
+Anchor Positioning: https://zhuanlan.zhihu.com/p/650086052
+```
+.reference {
+	anchor-name: xxx
+}
+
+.position {
+	top: anchor(xxx top)
+}
+or
+.position {
+	position-anchor: xxx
+	bottom: anchor(top);
+}
+
+
+```
+:dir
+:has
+:modal
+:popover-open
+:user-invalid
+@counter-style
+@font-palette-values
+@scope
+@starting-style
+contain-intrinsic-size
+content-visibility
+forced-color-adjust
+hyphenate-character
+hyphenate-limit-chars
+image-set
+mask-border
+offset-path
+overflow-clip-margin
+ray
+scrollbar-width scrollbar-color
+text-wrap: balance; //pretty
+white-space-collapse
+
+
+
+::grammar-error
+:host
+::slotted
+::spelling-error
+align-content on table cells
+
+
+hwb / rgb / hsl 
+CSS grid-template properties interpolation
+CSS 'ic' Length Unit
+Container Queries
+Media Queries Level 4 Syntax & Evaluation //ordinary mathematical comparison operators, and adds support for 'or', 'not', nesting, and evaluation of "unknown" features
+Android OSK resizes visual viewport by default + <meta> opt-out // https://stackoverflow.com/questions/78844736/how-to-polyfill-interactive-widget-resizes-content-for-meta-viewport-tag-on
+CSS break-after, break-before and break-inside support
+CSS Overflow for replaced elements
+CSS Values and Units Module Level 4: Small/Large/Dynamic/Logical viewport units
+font-tech() and font-format() condition extensions to CSS @supports
+Last Baseline Item Alignment
+CSS 'lh' Length Unit
+CSS Root Font Units: 'rex', 'rch', 'ric', 'rlh'
+CSS Selectors 4 Pseudo-Class :nth-child(an + b of S)
+Style Container Queries for CSS Custom Properties
+CSS animation-composition property
+Added support for CSS Nesting
+Linear easing function
+Boolean Context Style Container Queries
+'display' property with multiple values
+CSS Motion Path
+Display and content-visibility animations
+contain-intrinsic-size: auto none support
+CSS cap and rcap font units
+CSS overlay property
+CSS @starting-style Rule
+CSS Subgrid
+CSS transition-behavior property
+Consistent minimum font size across languages
+CSS logical flow-relative values
+Media Queries: prefers-reduced-transparency feature
+Remove non-standard appearance keywords
+Support stroke-box, content-box and border-box in the transform-box CSS property
+Clip-path geometry-box values
+Clip-path xywh() and rect() values
+CSS Relative Color Syntax (RCS)
+:user-valid and :user-invalid CSS pseudo-classes
+CSS <image> Syntax for registered Custom Properties
+CSS <transform-function> and <transform-list> Syntax for registered Custom Properties
+CSS :dir() pseudo-class selector
+CSS Exponential Functions
+CSS Font Loading API - FontFaceSet: check() method
+CSS masking
+Media Queries: scripting feature
+Relaxed CSS Nesting
+CSS font-palette property animation
+CSS Scrollbars: scrollbar-color, scrollbar-width
+CSS spelling and grammar features
+Improved CSS masking for SVG
+Ruby-specific display values
+CSS supports() condition for @import
+CSS Pseudo Element ::backdrop inheriting from Originating Element
+CSS @container with unsupported Features never match
+align-content CSS property for blocks
+CJK punctuation kerning: the CSS `text-spacing-trim` property
+CSSKeyframesRule.length
+CSS light-dark() Color Function
+CSS paint-order for non-SVG text
+CSS picture-in-picture display mode
+field-sizing CSS property
+SVG context-fill and context-stroke
+CSS Anchor Positioning
+CSS custom state new :state() syntax
+CSS Stepped Value Functions
+CSS view-transition-class and class VT argument syntax
+Remove Discontinuity for (ok)lab/lch colors with lightness of nearly 100% or 0
+CSSPageRule to inherit from CSSGroupingRule
+Deprecate old CSS custom state syntax
+CSS font-size-adjust
+CSS font-size-adjust: two-value syntax
+Multi-argument alt text in CSS Generated Content
+Used color scheme root scrollbars
+CSS ruby-align property
+Line-breakable ruby
+Rename position-try-options to position-try-fallbacks
+Standardized CSS zoom
+CSS Anchor Positioning: Unwrapped inset-area()
+CSS interpolate-size property and calc-size() function
+Update CSS backdrop-filter to use mirror edgeMode
+allow more pseudo-elements and pseudo-classes after ::part()
+CSS Container Queries flat tree lookup
+CSS Nesting: The Nested Declarations Rule
+Full and unprefixed box-decoration-break support
