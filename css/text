@@ -1,0 +1,3 @@
+# writing-mode
+writing-mode: Vertically-oriented form controls
+此属性指定块流动方向，即块级容器堆叠的方向，以及行内内容在块级容器中的流动方向。因此，它也确定块级内容的顺序。

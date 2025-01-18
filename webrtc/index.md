@@ -59,3 +59,156 @@ http://www.cnblogs.com/lingyunhu/
 https://github.com/webrtc/samples
 https://github.com/muaz-khan/WebRTC-Experiment
 https://www.chriskranky.com/
+
+
+
+
+
+WebTransport(QUIC/HTTP3) + WebCodecs
+region capture: https://region-capture-demo.glitch.me/
+https://tinyurl.com/mse-in-workers-demo
+https://github.com/wolenetz/mse-in-workers-demo/
+Capture Handle: https://w3c.github.io/mediacapture-handle/identity/demos/remote_control/capturer.html
+
+https://zhuanlan.zhihu.com/p/515375929
+https://webrtchacks.com/sdp-anatomy/
+https://www.bilibili.com/video/BV1Td4y167Sa/
+
+
+navigator.mediaDevices.getUserMedia({
+	audio: true,
+	audio: { echoCancellation: true },
+	video: true,
+	video: { 
+		width: 1280,  // {min: 1024, ideal: 1280, max: 1920,   exact: 1280}
+		height: 720 
+	},
+	video: { facingMode: 'user' } // 优先取前置摄像头 
+	video: { facingMode: { exact: 'environment'}} // 只要后置摄像头
+	video: { 
+		deviceId: '',
+		deviceId: {exact: ''}
+	},
+	video: {frameRate: { ideal: 10, max: 15 }}
+})
+.then((stream) => {
+	const video = document.querySelector('video');
+  video.srcObject = stream;
+  video.onloadedmetadata = () => {
+    video.play();
+  };
+})
+.catch((err) => {
+	// NotFoundError
+	// OverconstrainedError
+	// NotAllowedError
+	// AbortError
+	// NotReadableError
+	// TypeError //配置的constraint不合理, 或者在http环境调用这个接口
+	// SecurityError
+});
+
+
+navigator.mediaDevices.enumerateDevices()
+.then((devices) => {
+  //MediaDeviceInfo
+	//device.kind // videoinput audioinput audiooutput
+	//device.label // 要授权后才有
+	//device.deviceId //不同域下 id 值不一样? 清除cookie后会变
+	//devkice.groupId // 音频和视频来自于同一个设备时 具有相同的  groupId
+}).catch((err) => {})
+
+
+const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+for (const constraint of Object.keys(supportedConstraints)) {
+	console.log(constraint);
+}
+
+
+const videoTrack = stream.getVideoTracks()[0];
+await videoTrack.applyConstraints(constraints)
+
+
+MediaStream.active
+MediaStream.id
+
+
+navigator.mediaDevices.addEventListener('devicechange', event => {
+    //新的设备加入 或者 设备移除
+});
+
+
+
+
+navigator.mediaDevices.getDisplayMedia({
+	systemAudio: true // 默认提供的是共享的tab页的audio
+})
+
+
+
+
+// 发送端
+const peerConnection = new RTCPeerConnection({
+	iceServers: [{url: 'xx'}],
+	bundlePolicy: 'balanced', //'max-compat', 'max-bundle',
+	iceCandidatePoolSize: 0,
+	iceTransportPolicy: 'all', //'relay'
+	rtcpMuxPolicy: 'negotiate', //'require' 
+});
+
+
+
+
+const offer = await peerConnection.createOffer({
+	iceRestart: false, //true
+	voiceActivityDetection: true
+});
+
+
+await peerConnection.setLocalDescription(offer);
+send({offer: offer})// 将 offer 发给远端
+function onmessage(message) {
+	if (message.answer) {
+    const remoteDesc = new RTCSessionDescription(message.answer);
+    await peerConnection.setRemoteDescription(remoteDesc);
+  }
+  if (message.iceCandidate) {
+    try {
+        await peerConnection.addIceCandidate(message.iceCandidate);
+    } catch (e) {
+        console.error('Error adding received ice candidate', e);
+    }
+  }
+}
+peerConnection.addEventListener('icecandidate', event => {
+    if (event.candidate) {
+        send({'new-ice-candidate': event.candidate});
+    }
+});
+peerConnection.addEventListener('connectionstatechange', event => {
+    if (peerConnection.connectionState === 'connected') {
+        // Peers connected!
+        localStream.getTracks().forEach(track => {
+				    peerConnection.addTrack(track, localStream);
+				});
+    }
+});
+peerConnection.addEventListener('track', async (event) => {
+    const [remoteStream] = event.streams;
+    remoteVideo.srcObject = remoteStream;
+});
+
+
+//接收端
+const peerConnection = new RTCPeerConnection({
+	iceServers: [{url: 'xx'}]
+});
+
+function onmessage(message) {
+	if (message.offer) {
+    peerConnection.setRemoteDescription(new RTCSessionDescription(message.offer));
+    const answer = await peerConnection.createAnswer();
+    await peerConnection.setLocalDescription(answer);
+    send({answer: answer})// 将 answer 发给远端
+  }
+}

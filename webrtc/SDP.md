@@ -1,6 +1,7 @@
 # SDP
 https://www.ietf.org/archive/id/draft-nandakumar-rtcweb-sdp-08.txt
 SDP描述由许多文本行组成，文本行的格式为<类型>=<值>，<类型>是一个字母，<值>是结构化的文本串，其格式依<类型>而定
+描述了 codec 媒体类型等信息
 
 ### version
 v=0 //协议版本

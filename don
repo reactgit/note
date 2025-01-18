@@ -1,0 +1,400 @@
+Added support for vertical writing mode support for form controls
+Added support for <hr> inside <select> rendered as a separator on iOS
+Added support for the showPicker() method for <input type="date"> on macOS.
+Added support for <input type="checkbox" switch>
+Added Element.prototype.setHTMUnsafe()
+Added support for element.checkVisibility()
+Added support for the CSS Custom Highlight API.
+Added support for the name attribute in the <details> element.
+Added support for one-time-code as an allowed autocomplete field name
+Added support for sending mouse events to disabled form controls
+adoptedStyleSheets CSSStyleSheet CSSStyleValue.parse
+ElementInternals.setFormValue
+Added support for HEIC/HEIF images.
+Added support for JPEG XL
+Add onbeforeinput global event handler content attribute
+form rel attribute
+Add optional submitter parameter to FormData constructor //Allow passing a submit button to the FormData constructor.
+Added support for the Visual Viewport API for adjusting web content to avoid overlays, such as the onscreen keyboard
+Added support for the enterkeyhint attribute
+VisualViewport
+ArrayBuffer.prototype.transfer
+Scrollend Event
+visualViewport.onscrollend Support
+The Popover API
+Deprecate the `document.domain` setter.
+Scroll-driven animations
+Update of "xml" prefix handling in lookupNamespaceURI() and createNSResolver()
+VisibilityStateEntry
+Non-composed Mouse and Pointer enter/leave events
+Remove document.open sandbox inheritance
+Object.groupBy  Map.groupBy Array grouping Array.fromAsync
+Change beforeunload handler dialog condition
+SVGImageElement.crossOrigin attribute.
+XML documents merge consecutive CDATA sections into single node
+Disallow unknown import attributes
+Horizontal rules inside select elements
+Accordion pattern using name attribute on <details> elements
+EditContext API
+Added support for programmatic paste with user consent to Safari for iOS
+Feature detection for supported clipboard formats
+'pagereveal' event
+Document Render-Blocking
+'pageswap' event
+setHTMLUnsafe and parseHTMLUnsafe
+Streams API: ReadableStream async iteration
+'writingsuggestions' attribute
+Compute Pressure
+Compute Pressure WebDriver extension commands
+Async Clipboard API: Read unsanitized HTML.
+Async Clipboard: SVG support
+Interoperable mousemove default action
+Close requests for CloseWatcher, <dialog>, and popover=""
+toJSON for GeolocationCoordinates and GeolocationPosition
+Deprecate Mutation Events (Deprecated)
+Automatic Fullscreen Content Setting
+document.caretPositionFromPoint API
+Minimum size of <option> within <select> dropdown
+PointerEvent.persistentDeviceId for Multi-Pen Inking
+Promise.try
+Intl.DurationFormat
+Remove PointerEvent.getCoalescedEvents() from insecure contexts
+scheduler.yield()
+Snap Events
+Coalesced/predicted events in untrusted PointerEvents will retain original targets
+Concurrent Smooth scrollIntoViews
+Keyboard-focusable scroll containers
+Support non-special scheme URLs
+
+
+
+hidden: until-found
+当一个元素的属性处于这阵子状态时，表明该元素像hidden状态一样是隐藏的，但是元素中的内容可以被 页面中查找功能（Ctrl + F） 或 片段导航（如锚点链接） 访问。当这些特性试图滚动到元素子树中的目标时，用户代理将删除该属性，以便在滚动到它之前显示内容。
+
+inert 属性 让该元素及其子元素都不可交互
+
+details
+dialog
+summary
+datalist
+picture
+
+CSS Font Loading API - FontFaceSet: check() method
+Storage Access API
+View Transitions
+FedCM
+Media Session API
+Page Visibility API
+Web Speech API
+Web Audio API
+Shadow DOM
+Scoped Styles
+Web Animations API
+Web Crypto API
+Screen Orientation API
+Encoding API
+Navigator.hardwareConcurrency
+navigator.languages  // window.onlanguagechange = () => {} 
+Beacon
+Cache API
+Content Security Policy Level 2
+reportValidity
+Push API
+WebTransport
+
+High Resolution Time API
+Performance Timeline API
+Navigation Timing AP
+User Timing API
+Resource Timing API
+Paint Timing API
+
+
+meta theme-color
+
+
+Symbol.unscopables
+Generators
+
+structuredClone
+WritableStream
+  AudioWorklet
+Handwriting Recognition API
+CSS.paintWorklet.addModule('myWorklet.js');
+Houdini API
+
+Allow popstate to fire before load
+Web Custom formats for Async Clipboard API
+'blocking=rendering' attribute on scripts and style sheets
+blocking=render on inline module scripts
+import.meta.resolve()
+Import attributes 'with' syntax
+Deprecate and remove import assertion 'assert' syntax (Deprecated)
+Importmap integrity
+contentvisibilityautostatechange event
+Symbols as WeakMap keys
+Private network access for workers: warning-only mode
+Resizable ArrayBuffer and growable SharedArrayBuffer
+String.prototype.isWellFormed and toWellFormed
+URLPattern ignoreCase
+Make URL parser to not decode percent-encoded ASCII characters in URL's path
+URL.canParse
+URLPattern: Inherit left, wildcard right
+URLPattern: RegExp v flag instead of u
+URLPattern: hasRegExpGroups
+Standard compliant URL host punctuation characters
+Intersection Observer Scroll Margin
+View Transitions: making callback non-nullable
+View Transitions: transition types
+View Transitions Same-Origin Navigation
+SpeechSynthesis and SpeechSynthesisVoice interface objects
+Set methods
+Iterator helpers
+Back/forward cache NotRestoredReason API
+Long Animation Frame Timing
+
+  const popup = window.open('_blank','','popup=1');
+  const tab = window.open('_blank','','popup=0');
+
+### Abort
+AbortController AbortSignal throwIfAborted AbortSignal.timeout() Static Method
+Added support for AbortSignal.any()
+AbortSignal.any()
+
+### iframe
+Capability Delegation https://www.cnblogs.com/guanyx/p/16170202.html
+Block external protocol in sandboxed iframe
+Block iframe contexts navigating to filesystem: URLs
+FedCM: cross-origin iframe support
+Fullscreen Capability Delegation
+Iframe credentialless
+Fenced frames
+Fenced Frames M120 functionality updates
+Interoperable mousedown event cancellation in iframe
+
+### SerialPort
+SerialPort integration with WritableStream controller AbortSignal
+SerialPort forget()
+SerialPort BYOB reader support
+Web Serial support for Bluetooth RFCOMM services
+Web Serial: connected attribute and RFCOMM connection events
+### Web NFC
+Web NFC: NDEFReader makeReadOnly()
+### WebUSB
+USBDevice forget()	
+Web USB sameObject behavior
+WebUSB exclusionFilters option in requestDevice()
+WebUSB in Extension Service Workers
+### Bluetooth
+Permissions Policy for Web Bluetooth API
+Web Bluetooth exclusionFilters option in requestDevice()
+
+
+### WebRTC
+Remove SDES key exchange for WebRTC
+MediaCapabilities API for WebRTC // navigator.mediaCapabilities
+Deprecate and Remove Plan B
+Capture Handle
+Region Capture
+DisplayMediaStreamConstraints.systemAudio
+Expose TransformStreamDefaultController
+DisplayMediaStreamConstraints.selfBrowserSurface
+DisplayMediaStreamConstraints.surfaceSwitching
+Enable HEVC hardware decoding.
+MediaTrackConstraintSet.displaySurface
+Deprecate and Remove mediaConstraint's googIPv6 (Removed)
+MSE in Workers
+Conditional Focus
+MediaTrackSupportedConstraints.suppressLocalAudioPlayback
+Media Session API: Presenting slides actions
+WebRTC Scalable Video Coding extensions
+Make CaptureController derive from the EventTarget interface
+Per-frame quantizer in VideoEncoder
+Removal of WebRTC getStats datachannelIdentifier -1
+Removal of WebRTC getStats encoderImplementation/decoderImplementation "unknown"
+WebRTC RTP header extension control
+CaptureStartFocusBehavior enum value "focus-capturing-application"
+DisplayMediaStreamOptions monitorTypeSurfaces
+WebRTC Codec Selection API
+Deprecate and remove Theora support.
+MediaStreamTrack Stats (Video)
+MediaCapabilities: Query HDR support with decodingInfo()
+Remote Playback API
+RTCRtpSender setParameters() extensions for requesting the generation of a key frame
+jitterBufferTarget
+MP4 container support for MediaRecorder
+Support Video Chapter in MediaMetadata
+WebRTC encoded transform - Modify Metadata functions
+Blob support in WebRTC data channels
+
+
+### Picture
+Document picture-in-picture
+Media Session API: enterpictureinpicture action
+Document picture-in-picture: require user gesture for resize APIs
+Document picture-in-picture: allow Window's focus() API to focus opener
+Document picture-in-picture: propagate user activation
+SkipAd media session action
+Document picture-in-picture: add option to ignore window bounds cache
+
+#### WebCodecs
+WebCodecs dequeue event
+### WebTransport
+WebTransport serverCertificateHashes option
+WebTransport BYOB readers
+Allow transferring ArrayBuffer into VideoFrame, AudioData, EncodedVideoChunk, EncodedAudioChunk, ImageDecoder constructors
+OpusEncoderConfig `signal` and `application` parameters
+
+
+
+
+
+### HTTP / WebSockets
+TLS ALPN extension in wss-schemed WebSockets connections
+Allow simple Range header values without preflight
+fetchpriority
+HTTP->HTTPS redirect for HTTPS DNS records
+103 Early Hints for Navigation
+"deflate-raw" compression format
+Cookie Expires/Max-Age attribute upper limit
+Subresource loading with Web Bundles
+fetch() upload streaming
+ Response.json()
+Enforce CORS in subresource SignedExchange prefetching
+Render blocking status in Resource Timing
+HTTP response status code in Resource Timing
+TLS ClientHello extension permutation
+Headers.getSetCookie()
+Cookies Having Independent Partitioned State (CHIPS)
+Network State Partitioning
+HTTPS Upgrades
+Permissions-Policy: unload / Permissions policy violation reports
+Related Website Sets
+Resource Timing: Expose interim response times
+BYOB support for Fetch
+Report Critical-CH caused restart in NavigationTiming
+Opaque Response Blocking (ORB, aka CORB++) v0.2
+PerformanceResourceTiming deliveryType
+Protected Audience directFromSellerSignals via HTTP response headers
+Block all cookies set via JavaScript that contain control characters
+HTTP/3 protocol upgrade for HTTPS DNS records with h3 alpn parameter
+Cookie Expires/Max-Age attribute upper limit for prior storage
+Remove Authorization header upon cross-origin redirect
+Private Network Access restrictions for automotive
+Zstd Content-Encoding
+'priority' HTTP request header
+Private Network Access permission to relax mixed content
+WebSocketStream
+Accept HTTP(S) URLs when constructing WebSocket
+Direct Sockets API in Chrome Apps
+Align navigator.cookieEnabled with spec
+Cross-site ancestor chain bit for CookiePartitionKey of partitioned cookies
+Compression dictionary transport with Shared Brotli and Shared Zstandard
+
+
+#### Navigation API
+navigateEvent.intercept()
+navigateEvent.scroll()
+Detect UA Transitions on same-document Navigations
+NavigationActivation
+speculation rules API
+ Worklet loading is reported to Resource Timing
+ Same-site cross-origin prerendering triggered by the speculation rules API
+ Prefetching triggered by the speculation rules API
+ Speculation rules: Content Security Policy extension
+ referrer policy key
+ Speculation rules: delivery via Speculation-Rules header
+ Speculation rules: document-sourced rules
+ Speculation rules: eagerness field
+
+
+#### Client Hint
+navigator.userAgentData / Client Hints
+Add Save Data Client Hint
+Update User-Agent Client Hints GREASE implementation
+Removing Legacy Client Hint Mode
+Syntax changes to markup based Client Hints delegation
+Viewport-height client hint
+Sec-CH-Prefers-Reduced-Motion User Preference Media Features Client Hints Header
+Clear Client Hints via Clear-Site-Data header
+Clear-Site-Data header wildcard syntax
+Sec-CH-Prefers-Reduced-Transparency User Preference Media Features Client Hints Header
+No-Vary-Search Hint for Prefetch Speculation Rules
+No-Vary-Search support in navigation prefetch cache
+Sec-CH-UA-Form-Factors client hint
+No-Vary-Search Hint for Prerender Speculation Rules
+No-Vary-Search support for prerender
+
+
+
+### WebAssembly
+WebAssembly Dynamic Tiering
+WebAssembly Tail Call
+WebAssembly extended-const Proposal
+8MB Limit for WebAssembly.Module() on the Main Thread
+WebAssembly Garbage Collection (WasmGC)
+WebAssembly JS String Builtins
+
+### Web Share
+Add .avif to permitted Web Share file extensions
+web-share permission policy
+
+### Font
+Local Font Access
+tech() function support in @font-face src: descriptor
+Auto range support for font descriptors inside @font-face rule
+Windows ClearType Text Tuner Integration
+
+### File
+Writable directory prompts for the File System Access API
+Deprecate Persistent Quota
+Sync methods for SyncAccessHandle in File System Access API
+Origin Private File System (OPFS) on Android
+FileSystemHandle.remove() method
+Remove window.webkitStorageInfo (Removed)
+Added complete support for the Storage API
+Added support for overwriting the move method for FileSystemHandle
+Added support for StorageManager.estimate()
+Added support for calculating quota based on disk space
+Partitioning Storage, Service Workers, and Communication APIs
+requestStorageAccessFor
+Shared Storage API
+Storage Access API
+Storage Access API with Prompts
+ Dedicated workers and Storage Access API
+Multiple Readers and Writers in File System Access API
+Storage Buckets API
+Do not delete File kind objects in dataTransfer.clearData()
+Extending Storage Access API (SAA) to non-cookie storage
+Shared Storage [support running cross origin worklets without having to create an iframe]
+Write `image/svg+xml` content in UTF-8 format on Windows.
+ Improved error reporting in IndexedDB for large value read failures
+
+
+### Permission API
+Expanded Wildcards in Permissions Policy Origins
+Permissions Prompt for Web MIDI API
+
+### View Transitions API
+
+### Managed Device Web API
+Read Chrome device attributes
+
+### RegExp
+RegExp v flag with set notation + properties of strings
+Use RegExp v flag instead of u for HTML pattern attribute
+RegExp duplicate named capture groups
+RegExp modifiers
+
+### WebAuthn
+WebAuthn: Large blob storage extension (largeBlob)
+Allow for WebAuthn credential creation in a cross-origin iframe
+WebAuthn hints
+Web Authentication API: JSON serialization methods
+
+Private State Token API / Bounce Tracking Mitigations / Protected Audience features
+Topics API / Protected audience API (formerly FLEDGE) / Private Aggregation API/ Privacy Sandbox Ads APIs / Attribution Reporting API / FedCM API / Web Payment API / Intl
+WebHID API / navigator.getGamepads / Gamepad API / Digital Goods API 
+Omnibox prerendering 
+CustomElements
+Remove Sanitizer API

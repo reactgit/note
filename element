@@ -1,0 +1,45 @@
+<hr> inside <select> rendered as a separator 
+https://developer.chrome.com/blog/hr-in-select
+
+HTMLInputElement API: showPicker 
+https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/showPicker
+
+<input type="checkbox" switch> // (No longer pursuing)
+https://tkent-google.github.io/std-switch/demo.html
+
+sending mouse events to disabled form controls
+https://jakearchibald.com/2017/events-and-disabled-form-fields/
+
+form rel attribute
+which makes it possible to prevent window.opener from being present on websites navigated to by form elements which have rel=noopener and prevents the referer header from being sent with rel=noreferrer.
+
+Add optional submitter parameter to FormData constructor
+Allow passing a submit button to the FormData constructor.
+
+Element.prototype.setHTMUnsafe()
+https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTMLUnsafe
+
+Element.prototype.checkVisibility()
+https://developer.mozilla.org/en-US/docs/Web/API/Element/checkVisibility
+
+name attribute in the <details> element
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+
+HEIC / HEIF /JPEG XL image
+
+
+
+
+## event
+onbeforeinput global event handler content attribute
+ <input>, <textarea>, or contenteditable element is about to be modified
+
+
+# Custom Elements API
+ElementInternals.setFormValue
+
+
+
+
+# link
+https://codestax.medium.com/instance-methods-of-html-input-element-25f1eb5a4aed

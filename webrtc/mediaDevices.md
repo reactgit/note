@@ -1,7 +1,9 @@
 # mediaDevices
 https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices
+
 ## event
 ```
+
 navigator.mediaDevices.addEventListener('devicechange', function(event) {
 // 通过 MediaDevices.enumerateDevices 重新获取列表
 });

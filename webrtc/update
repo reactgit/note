@@ -1,0 +1,116 @@
+# Safari
+## 17.5
+Added support for WebCodecs AV1 when an AV1 hardware decoder is available
+Fixed WebCodecs to correctly use the VP9 hardware decoder
+Fixed no incoming video in Teams VA
+Fixed the camera pausing occasionally when torch is enabled
+
+## 17.4
+Added support for all of HTML’s character entities in WebVTT
+Added support for VP8/VP9 and WebM on iOS and iPadOS
+Added WebCodecs HEVC support
+Added MediaStream support for whiteBalanceMode
+Added support for the Vorbis audio codec on iOS, iPadOS, and in visionOS
+Added prioritizing video sources with power efficient hardware-decoded codecs before software-decoded codecs
+Fixed WebRTC calls not unmuting automatically after using Siri sometimes losing incoming audio
+Fixed getDisplayMedia frameRate always at 30 regardless of constraints
+Fixed media tracks obtained with {"width":1920,"height":1080,"frameRate":24}
+Fixed triggering resolution scaling in the case of WebRTC maintain-framerate degradationPreference. 
+Fixed a bug that prevented HTML canvas elements from always being marked dirty on initialization. This could cause some video effects to have choppy animations
+
+## 17.3
+Fixed to not loop if current time or duration is zero.
+
+## 17.2 
+Added unprefixed support for preservesPitch
+Implemented automatic text track selection for 'metadata' tracks
+Added support for H264 L1T2 for WebCodecs
+Fixed RTCRtpSender maxFramerate encoding parameter having no effect.
+Fixed long delays switching audio input in video conferencing applications. 
+Fixed video quality when using TransformStream with Simulcast
+Fixed WebRTC UDP traffic to use interfaces already used by TCP traffic
+Fixed RTCDataChannel to use BinaryType to align with specifications
+
+## 17.1
+Added support for Managed MediaSource on iOS.
+
+## 17
+Fixed repaint issue when drawing VideoFrames to canvas.
+Added support for Managed Media Source on macOS and iPadOS, and added support as a preview on iOS.
+Added support for AV1 codec support to the MediaCapabilities API for devices with hardware support.
+Added support for enforcing low-power mode and optimize video streaming setting by tone mapping HDR video to SDR
+Added support for stereo-only Opus in MPEG-4 and WebM containers on macOS Sonoma
+Added “Show Media Stats” when developer features are enabled in Safari.
+Added support for inbound rtp trackIdentifier stat field
+Added support for exposing zoom in MediaTrackCapabilities
+Added support for InputDeviceInfo
+Added support for getDisplayMedia video track clone resizing
+Fixed layer context handling for the HTMLMediaElement
+Fixed ending a muted microphone track when its device disappears
+Fixed camera selection to use the system preferred camera on iOS
+Fixed camera and microphone to all have groupIds
+
+
+
+## 15.4
+Added support for WebRTC perfect negotiation
+Added in-band chapter tracks support
+
+
+## 15
+Added support for the MediaSession API to enable SharePlay experiences.
+Added Playback Speed and Chapters menus to built-in media controls.
+Added hardware accelerated VP9 and WebM in MSE on all iPads that support iPadOS 15.
+Added support for the Opus audio codec in WebM containers
+
+
+## 14.1 
+Added support for WebM files containing VP8 or VP9 video tracks and Vorbis audio tracks in macOS
+Added support for MediaStream Recording to enable websites to record audio and video
+Added support for getUserMedia from MediaStream and Capture API in WKWebView
+
+## 14
+Added WebP image support
+Added HDR video playback support
+Changed to derive <img> aspect ratio from size attributes.
+Support for the Picture-in-Picture API is now available in iOS on iPhone
+
+
+## 13.1
+Added support for DTMF codec and proxies
+
+## 13
+Added support for the decodingInfo() method of the Media Capabilities API for checking supported codecs, efficiently supported codecs, and optional codec features including alpha.
+Added the ability to Safari for macOS to share your screen with others using only web technologies. Plug-ins are no longer required.
+Updated Safari for iPad to support Media Source Extensions.
+Added support for the navigator.mediaDevices property of the Media Capture and Streams API to SFSafariViewController.
+Added support for DTMF codec and proxies.
+
+
+
+## c121
+Support in Chrome for the VoiceIsolation getUserMedia constraint
+MediaCapabilities: Query HDR support with decodingInfo()
+Remote Playback API
+
+## c120
+Chrome will deprecate and remove support for the Theora video codec
+Allow transferring ArrayBuffer into VideoFrame, AudioData, EncodedVideoChunk, EncodedAudioChunk, ImageDecoder constructors
+MediaStreamTrack Stats (Video)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
