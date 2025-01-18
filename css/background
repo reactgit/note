@@ -1,0 +1,12 @@
+
+Background-clip: border-box/padding-box/content-box/text
+background-repeat: space; //round
+
+background-position-x 
+background-position-y
+
+
+background-image: cross-fade(url(1.jpg), url(2.jpg), 50%); 
+https://juejin.cn/post/6850037269768863751
+
+CSS background-position edge offsets

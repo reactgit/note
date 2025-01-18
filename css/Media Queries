@@ -1,0 +1,6 @@
+
+@media (100px <= width <= 1900px) 
+
+prefers-reduced-motion
+
+pointer, any-pointer, hover,  any-hover

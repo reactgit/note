@@ -1,0 +1,29 @@
+:any-link = :link +  :visited
+
+:read-only
+:read-write
+
+
+:focus-visible
+:focus-within
+
+::marker
+
+:first-line
+:dir
+
+:has
+:not
+:optional
+
+:is() // :matches :any()
+:indeterminate 
+:default 
+:nth-child 
+:nth-last-child
+:nth-of-type
+:in-range
+:out-of-range
+::first-letter
+:placeholder-shown
+:placeholder
