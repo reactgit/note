@@ -1,0 +1,15 @@
+
+container: container-name / container-type
+container-name: wrap
+container-type: size/inline-size/normal
+cqw/cqh/cqi/cqb/cqmin/cqmax
+
+@container wrap (max-width: 400px) {
+}
+
+@container style(color: blue) {
+}
+
+
+
+[CSS 数学函数与容器查询实现不定宽文本溢出跑马灯效果](https://juejin.cn/post/7205604505646465081)

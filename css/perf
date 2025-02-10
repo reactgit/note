@@ -1,0 +1,14 @@
+content-visibility: visible/hidden/auto
+
+contain-intrinsic-size
+
+https://www.cnblogs.com/coco1s/p/16373817.html
+
+
+
+css Containment
+contain:  none / strict / content / size / style / paint
+CSS Containment (css容器)  允许我们将页面中的一部分树独立开来, 独立开来的目的是为了告诉浏览器, 在这个独立树内部的一切活动都不会影响到除它之外的内容。 因此在复杂的页面中, 使用 CSS Containment 能够达到优化渲染提升性能的目的。
+
+
+will-change

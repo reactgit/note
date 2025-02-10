@@ -1,3 +1,26 @@
+text-wrap: balance
+
+text-box-trim
+text-box-edge
+
+
+text-orientation
+
+CSS hanging-punctuation
+
+text-indent
+
+line-clamp
+
+writing-mode
+letter-spacing
+
+text-emphasis
+https://juejin.cn/post/6947866495309316104
+
+text-align-last
+text-size-adjust
+text-rendering
 # writing-mode
 writing-mode: Vertically-oriented form controls
 此属性指定块流动方向，即块级容器堆叠的方向，以及行内内容在块级容器中的流动方向。因此，它也确定块级内容的顺序。

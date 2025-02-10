@@ -1,0 +1,61 @@
+
+resize: none/both/horizontal/vertical
+// 允许用户通过拖动的方式来自由缩放元素的尺寸
+
+min() / max() / clamp()
+clamp(minV, V, maxV)
+
+-webkit-user-drag
+user-select
+user-modify: read-write-plaintext-only
+-webkit-user-modify: read-write-plaintext-only
+user-drag
+
+contenteditable=""
+contenteditable="events"
+contenteditable="caret"
+contenteditable="plaintext-only"
+contenteditable="true"
+contenteditable="false"
+
+env() / constant()
+
+scroll-snap-align
+scroll-snap-stop
+scroll-snap-type
+scroll-padding
+-webkit-overflow-scrolling
+https://juejin.cn/post/6917034338479669262#comment
+
+scroll-behavior: auto | smooth
+overscroll-behavior: contain/auto/none
+contain: 小容器的滚动条滚到最下面后不影响大容器的滚动条
+https://juejin.cn/post/6844903512233803784
+
+overflow: clip
+overflow-clip-margin
+https://juejin.cn/post/6952803447515136030
+https://www.zhangxinxu.com/wordpress/2022/02/css-overflow-clip-margin/
+
+touch-action
+
+cursor: grab /	grabbing
+caret-color
+
+
+revert / unset  / initial / inherit
+https://juejin.cn/post/7223584687099625509
+
+
+CSS Logical Properties
+https://www.cnblogs.com/keatkeat/p/15967877.html
+
+
+image-rendering
+image-set
+image-orientation
+
+box-decoration-break
+https://juejin.cn/post/6844903784406073352
+
+Appearance

@@ -1,0 +1,25 @@
+
+```
+<div class="bubble-background"></div>
+
+.bubble-background {
+    width: 400px;
+    height: 400px;
+    background-image: paint(bubble);
+}
+
+ CSS.paintWorklet.addModule('bubble.js');
+```
+
+
+
+```
+# bubble.js
+class Bubble {
+    paint(context, canvas, properties) {
+        /* TODO: ... */
+    }
+}
+
+registerPaint('bubble', Bubble);
+```
